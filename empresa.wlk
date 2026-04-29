@@ -27,6 +27,7 @@ object mensajeria {
     return self.ultimoMensajero().pesoTotal()
   }
   method pesoTotalDeTodosLosMensajeros() {
-        mensajeros.sum({m => m.pesoTotal() }) //Lo utilizo para obtener el peso de todos, es decir, transformo mi lista de nombres en numeros
+        mensajeros.sum({m => m.pesoTotal() }) //Lo utilizo para obtener el peso de todos, es decir, obtengo de mi lista de nombres numeros
   }
+  
 }
