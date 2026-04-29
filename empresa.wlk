@@ -32,4 +32,8 @@ object mensajeria {
   method alMenosUnMensajeroPuedeEntregarUnPaquete(unPaquete) {
     return mensajeros.any({m => unPaquete.puedeSerEntregado(m)} )
   }
+
+  method losQuePuedenLlevar(unPaquete){
+    return mensajeros.filter({m => unPaquete.PuedeSerEntregado (m)})
+  }
 }
