@@ -29,5 +29,7 @@ object mensajeria {
   method pesoTotalDeTodosLosMensajeros() {
         mensajeros.sum({m => m.pesoTotal() }) //Lo utilizo para obtener el peso de todos, es decir, obtengo de mi lista de nombres numeros
   }
-
+  method alMenosUnMensajeroPuedeEntregarUnPaquete(unPaquete) {
+    return mensajeros.any({m => unPaquete.puedeSerEntregado(m)} )
+  }
 }
